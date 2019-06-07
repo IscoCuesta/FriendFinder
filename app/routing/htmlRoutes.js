@@ -27,7 +27,7 @@ router.post("/api/friends", function(req, res) {
         var user = req.body;
         console.log("request data" , req.body);
         var difscores = 0;
-        var best = 0;
+        var best = 100;
         var usermatch = 0
 
         for(var i=0; i<friends.length; i++){
