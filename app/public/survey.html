@@ -96,7 +96,7 @@
 
 		<footer class="footer">
 			<div class="container">
-				<p><a href="/api/friends">API friends Link</a> | <a href="/api/waiting">API Wait List</a> </p>
+				<p><a href="/api/friends">API friends Link</a></p>
 			</div>
 		</footer>
 
@@ -126,20 +126,22 @@
                         alert("enter your name and url of photo.")
                     }else{
                             
-                        $.post(currentURL + "/api/friends", newUser,
+                        $.post("/api/friends", newUser,
                             function (data) {
-                                if (data == true) {
-                                    alert("Your table is booked!")
+                                console.log("best match: "+data)
+                                if (data) {
+                                    alert("Your new best friend is " + data.body.name)
+                                    console.log(data.body)
 
                                 }
                                 if (data == false) {
                                     alert("Sorry, you are not compatible")
                                 }
-                                $('#reserve_name').val("");
-                                $('#reserve_phone').val("");
-                            });
+                                $('#name').val("");
+                                $('#photo').val("");
+                        });
                     }
-                        return false;
+                        
                 });
             });
         </script>

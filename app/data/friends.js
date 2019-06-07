@@ -1,0 +1,1 @@
+[{"name":"ger","photo":"https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/10/17/11/ron-swanson.jpg?w968h681","scores":["3","3","3","3","3","3","3","3","3","3"]}]

@@ -10,10 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const htmlRouter = require('./app/routing/htmlRoutes')
-// const apiRouter = require('./app/routing/apiRoutes')
+const apiRouter = require('./app/routing/apiRoutes')
 
 app.use('/', htmlRouter);
-// app.use('/survey', apiRouter);
+app.use('/api/friends', apiRouter);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
