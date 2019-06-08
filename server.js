@@ -9,11 +9,11 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const htmlRouter = require('./app/routing/htmlRoutes')
 const apiRouter = require('./app/routing/apiRoutes')
+const htmlRouter = require('./app/routing/htmlRoutes')
 
-app.use('/', htmlRouter);
 app.use('/api/friends', apiRouter);
+app.use('/', htmlRouter);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
